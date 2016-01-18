@@ -114,7 +114,7 @@ namespace dp
           /*! \brief Returns the object to search for.
            * \return The function returns the object last set using setObjectPtr. 
            */
-          DP_SG_ALGORITHM_API dp::sg::core::ObjectWeakPtr getObjectPointer() const;
+          DP_SG_ALGORITHM_API dp::sg::core::ObjectSharedPtr getObjectPointer() const;
 
           /*! Configures the base class search criterion option.
            * \param enable If true, the search will also consider objects of types derived from the class
@@ -290,7 +290,7 @@ namespace dp
         m_objectPointer = ptr;
       }
 
-      inline dp::sg::core::ObjectWeakPtr SearchTraverser::getObjectPointer( ) const
+      inline dp::sg::core::ObjectSharedPtr SearchTraverser::getObjectPointer( ) const
       {
         return m_objectPointer;
       }
